@@ -26,5 +26,5 @@ console.log(pessoaLiteral);
 pessoaLiteral = setCorPreferida(pessoaLiteral, 'Verde');
 console.log(pessoaLiteral);
 
-
+export default 1;
 

@@ -29,3 +29,4 @@ const result = soma(1, 2);
 
 
 
+export default 1;
