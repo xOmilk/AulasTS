@@ -1,3 +1,5 @@
+//Em essencia fala que se o objeto em questão tem AS MESMAS CHAVES que o outro objeto que está sendo esperado não existe problema
+
 type VerifyUserFn = (user: User, sentValue: User) => boolean
 type User = { username: string, password: string }
 
