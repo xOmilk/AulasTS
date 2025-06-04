@@ -1,9 +1,10 @@
-import { useState } from "react";
 import "./App.css";
+import { Forms } from "./components/Forms";
 
 export function App() {
-	return <div>
-    
-
-  </div>;
+	return (
+		<div>
+			<Forms />
+		</div>
+	);
 }
