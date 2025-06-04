@@ -32,5 +32,5 @@ const initialState: Person = {
 };
 
 export function usePerson() {
-	useReducer(reducer, initialState);
+	return useReducer(reducer, initialState);
 }

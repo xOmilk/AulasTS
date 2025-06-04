@@ -1,10 +1,8 @@
 import "./App.css";
-import { Forms } from "./components/Forms";
+import { SimpleForm } from "./pages/SimpleForm";
 
 export function App() {
 	return (
-		<div>
-			<Forms />
-		</div>
+		<SimpleForm/>
 	);
 }
