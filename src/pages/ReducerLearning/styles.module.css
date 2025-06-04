@@ -1,0 +1,18 @@
+.buttons {
+	display: flex;
+	flex-flow: row;
+	gap: 1.2rem;
+}
+
+.container {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.numero {
+	border-bottom: 2px solid red;
+	padding: 1rem;
+	padding-bottom: 0.5rem;
+}
