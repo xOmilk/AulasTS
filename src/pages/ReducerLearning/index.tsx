@@ -2,36 +2,77 @@ import { useReducer } from "react";
 
 import styles from "./styles.module.css";
 
-export function ReducerLearning() {
-	const [numero, dispatchNumero] = useReducer((state, action) => {
-		switch (action) {
-			case "INCREMENT":
-				return state + 1;
+type Action = {
+	type: "INCREMENT" | "DECREMENT" | "RESET";
+	payload?: number;
+};
 
-			case "DECREMENT":
-				if (state > 0) return state - 1;
+type State = {
+	secondsRemaining: number;
+};
 
-			case "ZERAR":
-				return (state = 0);
+function reducer(state: State, action: Action) {
+	switch (action.type) {
+		case "INCREMENT": {
+			if (!action.payload) return state;
+
+			return {
+				...state,
+				secondsRemaining: state.secondsRemaining + action.payload,
+			};
 		}
 
-		return state;
-	}, 0);
+		case "DECREMENT": {
+			if (!action.payload) return state;
+
+			return {
+				...state,
+				secondsRemaining: state.secondsRemaining - action.payload,
+			};
+		}
+
+		case "RESET": {
+			return {
+				...initialState,
+			};
+		}
+	}
+
+	return state;
+}
+
+const initialState: State = {
+	secondsRemaining: 0,
+};
+
+export function ReducerLearning() {
+	const [state, dispatchState] = useReducer(reducer, initialState);
 
 	return (
 		<div className={styles.container}>
-			<p>O numero é:</p>
-			<p className={styles.numero}>{numero}</p>
+			<p>O estado é:</p>
+			<p className={styles.numero}>{JSON.stringify(state)}</p>
 
 			<div className={styles.buttons}>
-				<button onClick={() => dispatchNumero("DECREMENT")}>
-					Decrementar
-				</button>
-				<button onClick={() => dispatchNumero("INCREMENT")}>
-					Incrementar
+				<button
+					onClick={() =>
+						dispatchState({ type: "INCREMENT", payload: 10 })
+					}
+				>
+					Incrementar + 10
 				</button>
 			</div>
-			<button onClick={() => dispatchNumero("ZERAR")}>Zerar</button>
+			<button
+				onClick={() =>
+					dispatchState({ type: "DECREMENT", payload: 10 })
+				}
+			>
+				Decrementar - 10
+			</button>
+
+			<button onClick={() => dispatchState({ type: "RESET" })}>
+				RESET
+			</button>
 		</div>
 	);
 }
