@@ -1,0 +1,33 @@
+@keyframes shake {
+	25% {
+		transform: scale(1) rotate(0deg);
+	}
+	50% {
+		transform: scale(1.1) rotate(-5deg);
+	}
+	75% {
+		transform: scale(1) rotate(5deg);
+	}
+	100% {
+		transform: scale(1) rotate(0deg);
+	}
+}
+
+div * {
+	transition: all 1s !important;
+
+	&:hover {
+		animation: shake 0.3s linear infinite !important;
+	}
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s !important;
+
+	&:hover {
+		animation: shake 0.3s linear infinite !important;
+	}
+}
