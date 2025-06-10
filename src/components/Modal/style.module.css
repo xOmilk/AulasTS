@@ -1,0 +1,47 @@
+.backgroundModal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	background-color: rgb(0, 0, 0, 0.7);
+}
+
+.modal {
+	display: flex;
+	justify-content: center;
+	color: black;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	height: 400px;
+	border-radius: 1rem;
+	background-color: #ccc;
+}
+
+.closeWindow {
+	cursor: pointer;
+	color: black;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	transition: all 0.5s;
+
+	&:hover {
+		color: red;
+	}
+}
+
+.content {
+	margin: auto auto;
+	width: calc(100% - 100px);
+	height: calc(100% - 100px);
+	border-radius: inherit;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+}

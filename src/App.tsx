@@ -1,8 +1,6 @@
 import "./App.css";
-import { Button } from "./components/Button";
-import { ReducerLearning } from "./pages/ReducerLearning";
-import { SimpleForm } from "./pages/SimpleForm";
+import { Home } from "./pages/Home";
 
 export function App() {
-	return <Button />;
+	return <Home />;
 }
