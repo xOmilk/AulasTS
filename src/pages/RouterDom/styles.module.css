@@ -1,0 +1,28 @@
+.page {
+	display: flex;
+	flex-flow: column;
+	gap: 1.5rem;
+}
+.container {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.cardItem {
+	width: 360px;
+	height: 300px;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 1px 1px 3px white;
+	border-radius: 1rem;
+    transition: all 0.3s;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
