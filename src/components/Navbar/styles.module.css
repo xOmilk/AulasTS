@@ -1,11 +1,12 @@
 .navbar {
-	position: fixed;
+	position: relative;
 	top: 0px;
 	height: 150px;
 	display: flex;
 	flex-flow: row;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 3rem;
 
 	ul {
 		margin-top: 5rem;

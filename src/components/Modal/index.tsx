@@ -4,9 +4,10 @@ import styles from "./style.module.css";
 type ModalProps = {
 	isOpen: boolean;
 	setModal: (isOpen: boolean) => void;
+	hasActions?: boolean;
 };
 
-export function Modal({ isOpen, setModal }: ModalProps) {
+export function Modal({ isOpen, setModal, hasActions }: ModalProps) {
 	const closeModal = () => {
 		setModal(false);
 	};
@@ -32,6 +33,25 @@ export function Modal({ isOpen, setModal }: ModalProps) {
 						onClick={closeModal}
 						className={styles.closeWindow}
 					/>
+
+					{hasActions && (
+						<footer>
+							<div className="buttons">
+								<button
+									className={styles.cancel}
+									onClick={closeModal}
+								>
+									Cancelar
+								</button>
+								<button
+									className={styles.save}
+									onClick={closeModal}
+								>
+									Salvar
+								</button>
+							</div>
+						</footer>
+					)}
 				</div>
 			</div>
 		);
