@@ -10,7 +10,7 @@ export function Home() {
 		if (!isOpen) setIsOpenModal(true);
 	};
 
-	function handleModal() {
+	function handleCloseModal() {
 		setIsOpenModal(!isOpen);
 	}
 
@@ -18,12 +18,27 @@ export function Home() {
 		<div className={styles.container}>
 			<h1>Home</h1>
 			<button onClick={openModal}>Abrir Modal</button>
-			<Modal isOpen={isOpen} closeHandler={handleModal}>
+			<Modal isOpen={isOpen} closeHandler={handleCloseModal}>
 				<Modal.Title title="Titulo generico" />
 				<Modal.Content content="TEXTO GENERICO" />
 				<Modal.Actions>
-					<Modal.Action onClickHandler={handleModal} variant="info">
-						Ok
+					<Modal.Action
+						onClickHandler={handleCloseModal}
+						variant="cancel"
+					>
+						Cancelar
+					</Modal.Action>
+					<Modal.Action
+						onClickHandler={handleCloseModal}
+						variant="info"
+					>
+						OK
+					</Modal.Action>
+					<Modal.Action
+						onClickHandler={handleCloseModal}
+						variant="save"
+					>
+						Salvar
 					</Modal.Action>
 				</Modal.Actions>
 			</Modal>
