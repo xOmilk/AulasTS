@@ -1,4 +1,4 @@
-import './styles.module.css'
+import "./styles.module.css";
 
 export function Button() {
 	return (

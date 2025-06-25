@@ -1,15 +1,21 @@
-import { usePerson } from "../../reducer/usePerson";
+import { PersonActionsType, usePerson } from "../../reducer/usePerson";
 import styles from "./styles.module.css";
 
 export function Forms() {
 	const [person, personDispatch] = usePerson();
 
 	function handleChangeFirstName(e: React.ChangeEvent<HTMLInputElement>) {
-		personDispatch({ type: "CHANGE_FIRST_NAME", value: e.target.value });
+		personDispatch({
+			type: PersonActionsType.CHANGE_FIRST_NAME,
+			value: e.target.value,
+		});
 	}
 
 	function handleChangeLastName(e: React.ChangeEvent<HTMLInputElement>) {
-		personDispatch({ type: "CHANGE_LAST_NAME", value: e.target.value });
+		personDispatch({
+			type: PersonActionsType.CHANGE_LAST_NAME,
+			value: e.target.value,
+		});
 	}
 
 	return (
@@ -31,7 +37,9 @@ export function Forms() {
 
 			{true && (
 				<div>
-					<p>O seu nome é {person.firstName} {person.lastName}</p>
+					<p>
+						O seu nome é {person.firstName} {person.lastName}
+					</p>
 				</div>
 			)}
 		</form>
