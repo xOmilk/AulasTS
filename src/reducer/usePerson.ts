@@ -4,19 +4,24 @@ type Person = {
 	lastName: string;
 };
 
+export enum PersonActionsType {
+	CHANGE_FIRST_NAME = "CHANGE_FIRST_NAME",
+	CHANGE_LAST_NAME = "CHANGE_LAST_NAME",
+}
+
 type Action = {
-	type: "CHANGE_FIRST_NAME" | "CHANGE_LAST_NAME";
+	type: PersonActionsType;
 	value: string;
 };
 
 const reducer = (state: Person, action: Action) => {
 	switch (action.type) {
-		case "CHANGE_FIRST_NAME":
+		case PersonActionsType.CHANGE_FIRST_NAME:
 			return {
 				...state,
 				firstName: action.value,
 			};
-		case "CHANGE_LAST_NAME":
+		case PersonActionsType.CHANGE_LAST_NAME:
 			return {
 				...state,
 				lastName: action.value,

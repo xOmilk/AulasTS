@@ -1,6 +1,11 @@
 import "./App.css";
-import { Home } from "./pages/Home";
+import { Navbar } from "./components/Navbar";
+import { MainRoute } from "./routes/MainRoute";
 
 export function App() {
-	return <Home />;
+	return (
+		<>
+			<MainRoute />
+		</>
+	);
 }

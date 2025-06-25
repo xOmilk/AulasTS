@@ -1,0 +1,38 @@
+.navbar {
+	position: fixed;
+	top: 0px;
+	height: 150px;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+
+	ul {
+		margin-top: 5rem;
+		top: 0;
+		display: flex;
+		gap: 3rem;
+		list-style: none;
+		li {
+			width: 100px;
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: center;
+			align-items: center;
+			background-color: silver;
+			padding: 10px;
+			border-radius: 0.8rem;
+			border: none;
+			transition: all 0.3s;
+
+			* {
+				color: black;
+			}
+
+			&:hover {
+				cursor: pointer;
+				opacity: 0.3;
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+.container {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: silver;
+	display: flex;
+	flex-flow: column;
+	padding: 2rem;
+}
+
+.rowItem {
+	p {
+		letter-spacing: 1.5px;
+	}
+}
