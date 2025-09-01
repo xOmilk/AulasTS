@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./styles.module.css";
 import { useNavigate } from "react-router";
+import { PAGE_ROUTES } from "../../constants/routes";
 
 export function RouterDom() {
 	const [time, setTime] = useState(45);
@@ -15,7 +16,7 @@ export function RouterDom() {
 		}, 1000);
 
 		if (time <= 0) {
-			navigate("/");
+			navigate(PAGE_ROUTES.home);
 		}
 
 		return () => {

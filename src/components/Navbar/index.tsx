@@ -2,6 +2,7 @@ import { BookText, House, LayoutTemplate, Waypoints } from "lucide-react";
 import { LinkRoute } from "../LinkPattern";
 
 import styles from "./styles.module.css";
+import { PAGE_ROUTES } from "../../constants/routes";
 
 export function Navbar() {
 	return (
@@ -9,20 +10,24 @@ export function Navbar() {
 			<ul>
 				<li>
 					<House />
-					<LinkRoute href="/">Home</LinkRoute>
+					<LinkRoute href={PAGE_ROUTES.home}>Home</LinkRoute>
 				</li>
 				<li>
 					<LayoutTemplate />
-					<LinkRoute href="/reducer-learning">Reducer</LinkRoute>
+					<LinkRoute href={PAGE_ROUTES.reducer}>Reducer</LinkRoute>
 				</li>
 				<li>
 					<BookText />
-					<LinkRoute href="/simple-form">Simple Form</LinkRoute>
+					<LinkRoute href={PAGE_ROUTES.simpleForm}>
+						Simple Form
+					</LinkRoute>
 				</li>
 
 				<li>
 					<Waypoints />
-					<LinkRoute href="/router-dom">Router Dom</LinkRoute>
+					<LinkRoute href={PAGE_ROUTES.routerDom}>
+						Router Dom
+					</LinkRoute>
 				</li>
 			</ul>
 		</nav>
