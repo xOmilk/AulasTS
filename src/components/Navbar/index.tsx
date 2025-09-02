@@ -1,10 +1,4 @@
-import {
-	BookText,
-	House,
-	LayoutTemplate,
-	LayoutTemplateIcon,
-	Waypoints,
-} from "lucide-react";
+import { BookText, House, LayoutTemplateIcon, Waypoints } from "lucide-react";
 import { LinkRoute } from "../LinkPattern";
 
 import styles from "./styles.module.css";
