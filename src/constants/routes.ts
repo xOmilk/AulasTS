@@ -3,5 +3,6 @@ export const PAGE_ROUTES = {
 	reducer: "/reducer-learning",
 	simpleForm: "/simple-form",
 	routerDom: "/router-dom", // Adicionada a barra inicial
-	notFound: "*", // Rota para 404
+	request: "/request",
+	notFound: "*",
 } as const;

@@ -1,32 +1,48 @@
-import { BookText, House, LayoutTemplate, Waypoints } from "lucide-react";
+import {
+	BookText,
+	House,
+	LayoutTemplate,
+	LayoutTemplateIcon,
+	Waypoints,
+} from "lucide-react";
 import { LinkRoute } from "../LinkPattern";
 
 import styles from "./styles.module.css";
 import { PAGE_ROUTES } from "../../constants/routes";
+import { SiAxios } from "react-icons/si";
 
 export function Navbar() {
 	return (
 		<nav className={styles.navbar}>
 			<ul>
 				<li>
-					<House />
-					<LinkRoute href={PAGE_ROUTES.home}>Home</LinkRoute>
-				</li>
-				<li>
-					<LayoutTemplate />
-					<LinkRoute href={PAGE_ROUTES.reducer}>Reducer</LinkRoute>
-				</li>
-				<li>
-					<BookText />
-					<LinkRoute href={PAGE_ROUTES.simpleForm}>
-						Simple Form
+					<LinkRoute href={PAGE_ROUTES.home}>
+						<House />
+						<span>Home</span>
 					</LinkRoute>
 				</li>
-
 				<li>
-					<Waypoints />
+					<LinkRoute href={PAGE_ROUTES.reducer}>
+						<LayoutTemplateIcon />
+						<span>Reducer</span>
+					</LinkRoute>
+				</li>
+				<li>
+					<LinkRoute href={PAGE_ROUTES.simpleForm}>
+						<BookText />
+						<span>Simple Form</span>
+					</LinkRoute>
+				</li>
+				<li>
 					<LinkRoute href={PAGE_ROUTES.routerDom}>
-						Router Dom
+						<Waypoints />
+						<span>Router Dom</span>
+					</LinkRoute>
+				</li>
+				<li>
+					<LinkRoute href={PAGE_ROUTES.request}>
+						<SiAxios size={24} />
+						<span>Request</span>
 					</LinkRoute>
 				</li>
 			</ul>
